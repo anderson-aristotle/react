@@ -6,7 +6,7 @@
 
 -   Familiarity with the DOM
 -   Experience with javascript
--   [React-Workshop-Prework](https://git.generalassemb.ly/ga-wdi-boston/react-workshop-prework)
+-   [react-study](https://git.generalassemb.ly/ga-wdi-boston/react-study)
 
 ## Objectives
 
@@ -14,8 +14,8 @@ By the end of this, developers should be able to:
 
 -   Explain what the Virtual DOM is and why it's important
 -   Evaluate and write simple JSX
--   Explain what components are
--   Build a React app using `create-react-app`
+-   Explain react components
+-   Build a simple component
 
 ## Preparation
 
@@ -35,17 +35,12 @@ Enter, React's Virtual DOM, Components, and JSX...
 
 ## Virtual DOM
 
-You should already be familiar with the DOM. The **Virtual DOM** gives us a javascript
+The **Virtual DOM** gives us a javascript
 representation of the actual DOM. When changes are made to the view we want to
 show, we update the Virtual DOM first, which then checks the diffs between what
 was changed to what is currently rendered, and changes ONLY the pieces that need
 to be changed, rather than re-rendering the entire page. You can think about it
 like a staging area for changes that will eventually be implemented.
-
-You'll see this later on when our code mentions `ReactDOM`. `ReactDOM` refers to
-the **Virtual DOM**.
-
-Watch [this video](https://generalassembly.wistia.com/medias/v5qyqsir0s) to find out more. _(note: right click for new tab!)_
 
 ## Components
 
@@ -53,7 +48,7 @@ The basic unit you'll be working with in ReactJS is a **component**. Components 
 to modularize or compartmentalize features of our applications.
 
 With components, there is more integration and less separation of HTML, CSS, and JavaScript.
-- Instead of creating a few large files, you will organize your web app into small, reusable components that encompass their own content, presentation, and behavior.
+Instead of creating a few large files, you will organize your web app into small, reusable components that encompass their own content, presentation, and behavior.
 
 ### Discussion: Identifying Components
 
@@ -77,87 +72,60 @@ As you're drawing this out, think about the following questions...
 * Are there any components that share the same structure?
 * For components that share the same structure, what is different about them?
 
-## Initial Setup
+## Running the SErver
 
-Alright, enough talk! Let's get our hands dirty, shall we? We'll create a
-skeleton React project and walk through it as we go.
+Alright, enough talk! Let's dive in to creating a React app.
 
-We'll use a terminal program called `create-react-app` to make creating a
-react template easy. In order to have access to it, run:
+Turns out, there's already one in this repo. To see it,
+use `npm start` to start a server that will serve your new React application!
 
-```sh
-$ npm install --global create-react-app
+After running `$ npm start`, you can view the app at `http://localhost:3000`.
+
+Most of the important files are in the `src` directory. Specifically, we'll
+be using `src/App.js` and `src/index.js` in this lesson.
+
+## Directory Structure
+
+Almost all the work we'll do on a React app will be in the `src` directory. This
+directory contains all our components (both their markup and JavaScript), all
+our styles, and the layout and structure of application. Here, we have two very
+important files: `index.js` and `App.js`.
+
+We won't usually modify `index.js`. The purpose of this file is to bundle up our
+dependencies, and render our `App` component to the DOM. Our `App` component is
+the entry point to our application. Any other components (and indeed, anything
+at all) that we add to our app will be nested inside this `App` component. In
+React, all our code and all our markup live in components!
+
+Let's take a look at what's in `App.js`. See this?
+
+```jsx
+  const App = () => (
+    <div>
+      <h1>Welcome to React!</h1>
+    </div>
+  )
 ```
 
-Once it's installed, create a new directory to store the app you're about to write and `cd` to the folder. Then, use the tool to create a new React app. You'll have to give your new app a name; we're calling the example app "inventory-mostly-done-before", since that'll be our first project,
-or `imdb` for short.
+That's a component! For components that just render static HTML, like this one,
+we can define them as arrow functions that return JSX (basically, HTML with
+JavaScript in it). If we wanted our component to do anything, like make an AJAX
+request or respond to user interaction, we'd need a different syntax.
 
-```sh
-$ create-react-app imdb
-```
-
-The tool creates a new directory for your app, so move into it...
-
-```sh
-$ cd imdb
-```
-
-Use `npm start` to start a server that will serve your new React application!
-
-GIT INIT AND COMMIT
-
-```sh
-$ npm start
-```
-
-> You have now set up a IMDB app that you will continue working on through the
-workshop!
-
-After running `$ npm start`, you can view the app at `http://localhost:3000`
-
-> Note: If you ever need to stop the server, you can hit `ctrl-c` in the terminal window.
-
-You can look in the directory and see the structure that `create-react-app` provides for us. It looks like this:
-
-```sh
-├── README.md
-├── package.json
-├── public
-│   ├── favicon.ico
-│   └── index.html
-└── src
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
-    ├── index.css
-    ├── index.js
-    └── logo.svg
-```
-
-Most of the important files are in the `src` directory. Specifically, we'll be using `src/App.js` and `src/index.js`.
-
----
-
-## Lab: Investigate
-
-Take some time and look at what's been generated. Specifically pay attention to `src/App.js` and `src/index.js`
-
-Make small changes to the code in `src/App.js`, `src/index.js`, and `public/index.html` just to see what happens.
-
-Your basic React app is up and running. Now you're ready to add complexity.
+The other way to define components is with the ES6 `class` syntax. Let's see an
+example of that now.
 
 ## Building components
 
 #### Code along: A Very Basic Component
 
-To start, remove the entire contents of the `src/App.js` file.
-
-Then, add the component definition below:
+Create a new file in `src` called `Movie.js`, and add this simple component to
+it.
 
 ```js
 // bring in React and Component from React
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 // define our Movie component
 class Movie extends Component {
@@ -177,7 +145,7 @@ export default Movie
 
 Let's break down the things we see here...
 
-##### `import React, {Component} from 'react'`
+##### `import React, { Component } from 'react'`
 This imports React methods and the `Component` class from the React library.
 
 ##### `class Movie`
@@ -192,16 +160,31 @@ We inherit from the `Component` React library class to create our component defi
 Every component has a `render` method. The `render` method is what renders the component to the screen, so it controls what is displayed for this component. From this function, we return what we want to display.
 - In our case, we are rendering a movie heading: `<h1>Movie!</h1>`.
 
-> Note! That heading tag above looks like it's straight out of HTML, but it's actually a special language called JSX, which you'll see soon. For now, know that JSX will act like HTML when it's rendered to the screen.
+> Note! That heading tag above looks like it's straight out of HTML, but it's actually a  language called JSX. For now, know that JSX will act like HTML when it's rendered to the screen.
 
 ##### `export default Movie`
-This exposes the `Movie` class to other files.  This means that other files can `import` from the `App.js` file in order to use the `Movie` class. In our case, we'll be importing it into `index.js` by calling an `import` to `App.js`.
+This exposes the `Movie` class to other files.  This means that other files can `import` from the `App.js` file in order to use the `Movie` class.
 
-When we try to import something from `App.js`, JavaScript will attempt to match a named export.
-- Our only named export in `App.js` is `Movie`.
+Let's try that now. Open, up `App.js` and add the following to the `import`
+statements at the top.
 
 The `default` keyword means that if we try to import anything from this file that the app can't find, JavaScript will automatically revert to importing `Movie` instead.
-- Only one default export is allowed per file.
+Only one default export is allowed per file.
+
+```js
+import Movie from './Movie.js'
+```
+
+Then, we can render our movie component, like this:
+
+```jsx
+  const App = () => (
+    <div>
+      <h1>Welcome to React!</h1>
+      <Movie />
+    </div>
+  )
+```
 
 ### Check it out!
 
@@ -211,7 +194,7 @@ If you switch to your browser and navigate to http://localhost:3000, you can see
 
 Well, turns out [Reese's may have been onto something...](https://www.youtube.com/watch?v=O7oD_oX-Gio)
 
-Let's slightly modify the contents of our `src/App.js` file:
+Let's slightly modify the contents of our `src/Movie.js` file:
 
 ```js
 // bring in React and Component from React
@@ -254,11 +237,13 @@ Play around for 5 minutes adding different things to the `return` section of
 the render method. Reference the JSX documenation to find out what is and isn't
 valid JSX!
 
-### Lab: Tagline time!
+### Code-along: display multiple movies
 
-- Change your `Movie` component to return multiple movies.
-  - Try hard coding it
-  - Try using `.map()`
+Our movie component isn't very dynamic. It can still only render a pre-determined
+movie. Let's change that. First, let's hard code a an array of movie titles in
+`App.js`. Then, we'll iterate through our array, and render one `Movie` component
+for each title. To pass the title into the `Movie` component, we'll need to use
+something called "props". We'll learn more about them in the next lesson.
 
 > Remember, the return statement in `render` can only return one DOM element!
 
