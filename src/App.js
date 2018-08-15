@@ -4,7 +4,10 @@ import './App.scss'
 import { Route, Link } from 'react-router-dom'
 
 const Dashboard = () => (
-  <p>Dashboard</p>
+  <div>
+    <h3>Dashboard</h3>
+    <p>This is separate route.</p>
+  </div>
 )
 
 const App = () => (
@@ -12,6 +15,7 @@ const App = () => (
     <nav>
       <Link to="/dashboard">Dashboard</Link>
     </nav>
+    <h1>Welcome to React!</h1>
     <div>
       <Route path="/dashboard" component={Dashboard}/>
     </div>
