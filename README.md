@@ -232,7 +232,7 @@ Your `Movie` component's `render` method:
 ### Lab: JSX play time!
 
 Play around for 5 minutes adding different things to the `return` section of
-the render method. Reference the JSX documenation to find out what is and isn't
+the render method. Reference the [JSX documenation](https://reactjs.org/docs/jsx-in-depth.html) to find out what is and isn't
 valid JSX!
 
 ### Code-along: display multiple movies
