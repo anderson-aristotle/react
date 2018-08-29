@@ -238,7 +238,7 @@ valid JSX!
 ### Code-along: display multiple movies
 
 Our movie component isn't very dynamic. It can still only render a pre-determined
-movie. Let's change that. First, let's hard code a an array of movie titles in
+movie. Let's change that. First, let's hard code an array of movie titles in
 `App.js`. Then, we'll iterate through our array, and render one `Movie` component
 for each title. To pass the title into the `Movie` component, we'll need to use
 something called "props". We'll learn more about them in the next lesson.
