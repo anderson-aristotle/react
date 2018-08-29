@@ -72,7 +72,7 @@ As you're drawing this out, think about the following questions...
 * Are there any components that share the same structure?
 * For components that share the same structure, what is different about them?
 
-## Running the SErver
+## Running the Server
 
 Alright, enough talk! Let's dive in to creating a React app.
 
