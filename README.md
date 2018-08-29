@@ -192,8 +192,6 @@ If you switch to your browser and navigate to http://localhost:3000, you can see
 
 ### Wait - What's that HTML doing in my Javascript?
 
-Well, turns out [Reese's may have been onto something...](https://www.youtube.com/watch?v=O7oD_oX-Gio)
-
 Let's slightly modify the contents of our `src/Movie.js` file:
 
 ```js
