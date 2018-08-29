@@ -243,7 +243,7 @@ movie. Let's change that. First, let's hard code an array of movie titles in
 for each title. To pass the title into the `Movie` component, we'll need to use
 something called "props". We'll learn more about them in the next lesson.
 
-> Remember, the return statement in `render` can only return one DOM element!
+> Remember, the return statement in `render` can traditionally only return one DOM element!
 
 ## [License](LICENSE)
 
