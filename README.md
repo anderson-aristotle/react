@@ -245,6 +245,13 @@ something called "props". We'll learn more about them in the next lesson.
 
 > Remember, the return statement in `render` can traditionally only return one DOM element!
 
+## Additional Resources
+- [ReactJS Koans](https://github.com/arkency/reactjs_koans)
+- [React Developer Roadmap](https://github.com/adam-golab/react-developer-roadmap)
+- [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
+- [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html)
+- [React Internals: Virtual DOM](https://reactjs.org/docs/faq-internals.html)
+
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
