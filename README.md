@@ -257,6 +257,8 @@ something called "props". We'll learn more about them in the next lesson.
 > Remember, the return statement in `render` can traditionally only return one DOM element!
 
 ## Additional Resources
+
+- [React Crash Course Video](https://www.youtube.com/watch?v=sBws8MSXN7A)
 - [ReactJS Koans](https://github.com/arkency/reactjs_koans)
 - [React Developer Roadmap](https://github.com/adam-golab/react-developer-roadmap)
 - [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
