@@ -79,7 +79,7 @@ Alright, enough talk! Let's dive in to creating a React app.
 Turns out, there's already one in this repo. To see it,
 use `npm start` to start a server that will serve your new React application!
 
-After running `$ npm start`, you can view the app at `http://localhost:3000`.
+After running `$ npm start`, you can view the app at `http://localhost:7165`.
 
 Most of the important files are in the `src` directory. Specifically, we'll
 be using `src/App.js` and `src/index.js` in this lesson.
@@ -188,7 +188,7 @@ Then, we can render our movie component, like this:
 
 ### Check it out!
 
-If you switch to your browser and navigate to http://localhost:3000, you can see your movie heading. This app dynamically reloads each time you save, so you can check your changes at any point.
+If you switch to your browser and navigate to http://localhost:7165, you can see your movie heading. This app dynamically reloads each time you save, so you can check your changes at any point.
 
 ### Wait - What's that HTML doing in my Javascript?
 
