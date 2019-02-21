@@ -229,6 +229,17 @@ Your `Movie` component's `render` method:
 - The JSX creates a DOM element with whatever you put in the `return ()` statement.
 - Your component reads this and renders a movie heading (or multiple???).
 
+### Code-along: React Developer Tools
+
+The regular Chrome inspector can still be useful to us when working with React,
+but it has some limitations. For one, it won't show us which components were
+looking at. Also, once we start to use props and state in our applications,
+we'll want a way to view those directly.
+
+There's a Chrome extension called [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+that can help us achieve all that and more! Let's install it now, then use it
+to inspect the simple app we've already created.
+
 ### Lab: JSX play time!
 
 Play around for 5 minutes adding different things to the `return` section of
