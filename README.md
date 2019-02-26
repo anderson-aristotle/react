@@ -30,6 +30,17 @@ By the end of this, developers should be able to:
 1.  Checkout to the `training` branch.
 1.  Install dependencies with `npm install`.
 
+## Discussion: Front-end Frameworks
+
+Take a few minutes with your team to research and discuss the following
+questions:
+
+- What is a framework in programming?
+- How is a framework different from a library?
+- What are some frameworks and libraries that we've used in SEI?
+- What are some popular front-end frameworks?
+- What problems do they attempt to solve?
+
 ## React Basics
 
 The React framework was built to solve one problem: building large applications with data that changes over time.
