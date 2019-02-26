@@ -2,6 +2,11 @@
 
 # React
 
+React is a JavaScript framework for making richly interactive front-end
+applications. There are many front-end frameworks out there, but React is
+perhaps the most prominent framework in front-end development today. Vue.js and
+Angular are very popular as well.
+
 ## Prerequisites
 
 -   Familiarity with the DOM
