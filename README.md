@@ -2,6 +2,11 @@
 
 # React
 
+React is a JavaScript framework for making richly interactive front-end
+applications. There are many front-end frameworks out there, but React is
+perhaps the most prominent framework in front-end development today. Vue.js and
+Angular are very popular as well.
+
 ## Prerequisites
 
 -   Familiarity with the DOM
@@ -24,6 +29,17 @@ By the end of this, developers should be able to:
 1.  Create a new branch, `training`, for your work.
 1.  Checkout to the `training` branch.
 1.  Install dependencies with `npm install`.
+
+## Discussion: Front-end Frameworks
+
+Take a few minutes with your team to research and discuss the following
+questions:
+
+- What is a framework in programming?
+- How is a framework different from a library?
+- What are some frameworks and libraries that we've used in SEI?
+- What are some popular front-end frameworks?
+- What problems do they attempt to solve?
 
 ## React Basics
 
@@ -79,7 +95,7 @@ Alright, enough talk! Let's dive in to creating a React app.
 Turns out, there's already one in this repo. To see it,
 use `npm start` to start a server that will serve your new React application!
 
-After running `$ npm start`, you can view the app at `http://localhost:3000`.
+After running `$ npm start`, you can view the app at `http://localhost:7165`.
 
 Most of the important files are in the `src` directory. Specifically, we'll
 be using `src/App.js` and `src/index.js` in this lesson.
@@ -188,7 +204,7 @@ Then, we can render our movie component, like this:
 
 ### Check it out!
 
-If you switch to your browser and navigate to http://localhost:3000, you can see your movie heading. This app dynamically reloads each time you save, so you can check your changes at any point.
+If you switch to your browser and navigate to http://localhost:7165, you can see your movie heading. This app dynamically reloads each time you save, so you can check your changes at any point.
 
 ### Wait - What's that HTML doing in my Javascript?
 
@@ -229,6 +245,17 @@ Your `Movie` component's `render` method:
 - The JSX creates a DOM element with whatever you put in the `return ()` statement.
 - Your component reads this and renders a movie heading (or multiple???).
 
+### Code-along: React Developer Tools
+
+The regular Chrome inspector can still be useful to us when working with React,
+but it has some limitations. For one, it won't show us which components were
+looking at. Also, once we start to use props and state in our applications,
+we'll want a way to view those directly.
+
+There's a Chrome extension called [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+that can help us achieve all that and more! Let's install it now, then use it
+to inspect the simple app we've already created.
+
 ### Lab: JSX play time!
 
 Play around for 5 minutes adding different things to the `return` section of
@@ -246,6 +273,8 @@ something called "props". We'll learn more about them in the next lesson.
 > Remember, the return statement in `render` can traditionally only return one DOM element!
 
 ## Additional Resources
+
+- [React Crash Course Video](https://www.youtube.com/watch?v=sBws8MSXN7A)
 - [ReactJS Koans](https://github.com/arkency/reactjs_koans)
 - [React Developer Roadmap](https://github.com/adam-golab/react-developer-roadmap)
 - [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)

@@ -1,6 +1,7 @@
 {
-  "extends": ["plugin:react/recommended"],
+  "extends": ["plugin:react/recommended", "standard"],
   "root": true,
+  "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
   },
